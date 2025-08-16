@@ -1,0 +1,26 @@
+/* 1. declaração das variáveis de cores */
+:root {
+--cor-fundo: #f0f2f5;
+--cor-branco: #ffffff;
+--cor-texto-primario: #1c1e21;
+--cor-texto-secundario: #606770;
+--cor-borda: #dcdfe3;
+--cor-acento:#007bff;
+}
+
+/* 2. Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI', system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,sans-serif;
+    background-color: var(--cor-fundo);
+    /* Nesse trecho para baixo, os comandos serão para centralizar o card na página para visualização */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
