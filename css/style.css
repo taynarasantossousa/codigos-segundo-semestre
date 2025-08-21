@@ -30,7 +30,7 @@ body {
     background-color: var(--cor-branco);
     width: 320px;
     border-radius: 16px;
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     /* A mágica da animação começa aqui */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* Esconder qualquer conteúdo filho que possivelmente saia dos limites  */
@@ -43,4 +43,70 @@ body {
     transform: translateY(-10px);
     /* Mover o card em 10 px para cima */
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* 5. Estilos da imagem do Card */
+.card_image-container {
+    width: 100%;
+    height: 200px;
+    /* Altura fixa para o container da imagem */
+}
+
+.card_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Garante que a imagem cubra todo o container */
+}
+
+/* 6.Estilo da informação(nome,titulo e social) */
+.card_info {
+    padding: 24px;
+}
+
+.card_name {
+    font-size: 1.5rem;
+    color: var(--cor-texto-primario);
+    margin-bottom: 8px;
+}
+
+.card_title {
+    font-size: 1rem;
+    /* 16px */
+    color: var(--cor-texto-secundario);
+    margin-bottom: 16px;
+}
+
+/* 7.Estilo dos icones sociais(utilizando flexbox) */
+.card_social {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.card_social a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--cor-acento);
+    border: 2px solid var(--cor-acento);
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, ease, color 0.3s ease;
+}
+
+.card_social a:hover {
+    background-color: var(--cor-acento);
+    color: var(--cor-branco);
+    border-color: var(--cor-acento);
+}
+
+/* 8. Design Responsivo (nossa primeira Media Query!) */
+@media (max-width: 400px) {
+    .card {
+        width: 90%;
+        /* O card ocupara 90% da largura da tela */
+    }
 }
